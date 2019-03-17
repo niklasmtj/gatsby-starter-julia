@@ -5,18 +5,24 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@emotion/core": "^10.0.9",
+    "@emotion/styled": "^10.0.9",
     "gatsby": "^2.1.31",
     "gatsby-image": "^2.0.33",
+    "gatsby-plugin-emotion": "^4.0.6",
     "gatsby-plugin-manifest": "^2.0.24",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.9",
     "gatsby-plugin-sharp": "^2.0.28",
+    "gatsby-remark-reading-time": "^1.0.1",
     "gatsby-source-filesystem": "^2.0.24",
+    "gatsby-transformer-remark": "^2.3.4",
     "gatsby-transformer-sharp": "^2.1.17",
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "typeface-nunito": "0.0.72"
   },
   "devDependencies": {
     "prettier": "^1.16.4"

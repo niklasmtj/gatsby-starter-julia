@@ -1,32 +1,45 @@
 import { Link } from "gatsby"
+import {css} from '@emotion/core'
 import PropTypes from "prop-types"
 import React from "react"
 
 const Header = ({ siteTitle }) => (
   <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
+    css={css`
+      background: transparent;
+      display:flex;
+      align-content: center;
+      justify-content: center;`
+    }
   >
     <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
+      css={css`
+        max-width: 860px;
+        padding: 1rem 1.0875rem;
+        font-size: 1.2rem;`
+      }
     >
-      <h1 style={{ margin: 0 }}>
+      <p>
         <Link
           to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
+          css={css`
+            color: black;
+            text-decoration: none;`
+          }
         >
           {siteTitle}
         </Link>
-      </h1>
+        <Link
+          to="/blog"
+          css={css`
+            color: black;
+            text-decoration: none;
+            margin-left: 15px;`
+          }
+        >
+          Blog
+        </Link>
+      </p>
     </div>
   </header>
 )
