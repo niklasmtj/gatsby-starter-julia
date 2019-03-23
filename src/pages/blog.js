@@ -6,8 +6,14 @@ import styled from "@emotion/styled"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+const Content = styled.div`
+  margin: 0 auto;
+  max-width: 860px;
+  padding: 1.45rem 1.0875rem;
+`
+
 const ArticleDate = styled.h5`
-  display:inline;
+  display: inline;
   color: #bbb;
   margin-bottom: 10px;
 `
@@ -25,7 +31,7 @@ const MarkerHeader = styled.h3`
 `
 
 const ReadingTime = styled.h5`
-  display: inline;  
+  display: inline;
   color: #bbb;
   margin-bottom: 10px;
 `
@@ -34,20 +40,8 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <div
-        css={css`
-          margin: 0 auto;
-          max-width: 860px;
-          padding: 1.45rem 1.0875rem;
-        `}
-      >
-        <h1
-          css={css`
-            display: inline-block;
-          `}
-        >
-          Blog
-        </h1>
+      <Content>
+        <h1>Blog</h1>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <Link
@@ -66,7 +60,7 @@ const IndexPage = ({ data }) => {
             </Link>
           </div>
         ))}
-      </div>
+      </Content>
     </Layout>
   )
 }

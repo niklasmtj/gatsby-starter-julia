@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-starter-julia",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A minimal blog template built with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Niklas Metje <hi@niklasmtj.de>",
   "dependencies": {
     "@emotion/core": "^10.0.9",
     "@emotion/styled": "^10.0.9",

@@ -1,8 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import Layout from "../components/layout"
+
+const Content = styled.div`
+  margin: 0 auto;
+  max-width: 860px;
+  padding: 1.45rem 1.0875rem;
+`
 
 const MarkedHeader = styled.h1`
   display: inline;
@@ -24,17 +29,13 @@ export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout>
-      <div
-        css={css`
-          margin: 0 auto;
-          max-width: 860px;
-          padding: 1.45rem 1.0875rem;
-        `}
-      >
+      <Content>
         <MarkedHeader>{post.frontmatter.title}</MarkedHeader>
-        <HeaderDate>{post.frontmatter.date} - {post.fields.readingTime.text}</HeaderDate>
+        <HeaderDate>
+          {post.frontmatter.date} - {post.fields.readingTime.text}
+        </HeaderDate>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>
+      </Content>
     </Layout>
   )
 }
