@@ -8,6 +8,8 @@
   Gatsby Starter Julia
 </h1>
 
+This Gatsby starter is built on top of the official [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default).
+
 ## Features:
 * Landingpage
 * Blog overview page
@@ -45,6 +47,9 @@ export default PageName
 To change the name on the landing page please modify the `title` in `gatsby-config.js`
 
 The Nunito typeface is included as a npm module in `gatsby-browser.js` and in `/components/layout.css`
+
+___
+The following is the quick start guide for starting developing with [GatsbyJS](https://www.gatsbyjs.org/) 
 
 ## 🚀 Quick start
 
