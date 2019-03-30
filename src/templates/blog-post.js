@@ -25,6 +25,30 @@ const HeaderDate = styled.h3`
   color: #bbb;
 `
 
+// STYLE THE TAGS INSIDE THE MARKDOWN HERE
+const MarkdownContent = styled.div`
+  a {
+    text-decoration: none;
+    position: relative;
+  }
+
+  a::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 70%;
+    left: -0.1px;
+    right: -0.1px;
+    bottom: 0;
+    transition: top 0.1s ease-in-out;
+    background-color: rgba(255, 250, 150, 0.8);
+  }
+
+  a:hover::after {
+    top: 0;
+  }
+`
+
 export default ({ data }) => {
   const post = data.markdownRemark
   return (
@@ -34,7 +58,7 @@ export default ({ data }) => {
         <HeaderDate>
           {post.frontmatter.date} - {post.fields.readingTime.text}
         </HeaderDate>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
       </Content>
     </Layout>
   )
