@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import styled from "@emotion/styled"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const Content = styled.div`
   margin: 0 auto;
@@ -22,7 +23,7 @@ const MarkedHeader = styled.h1`
 
 const HeaderDate = styled.h3`
   margin-top: 10px;
-  color: #bbb;
+  color: #606060;
 `
 
 // STYLE THE TAGS INSIDE THE MARKDOWN HERE
@@ -53,6 +54,7 @@ export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout>
+      <SEO title={post.frontmatter.title} />
       <Content>
         <MarkedHeader>{post.frontmatter.title}</MarkedHeader>
         <HeaderDate>

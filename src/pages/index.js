@@ -1,5 +1,4 @@
 import React from "react"
-import {css} from "@emotion/core"
 
 import LandingBio from "../components/landing-bio"
 import Layout from "../components/layout"
