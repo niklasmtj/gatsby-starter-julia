@@ -18,6 +18,7 @@
 * Styled components with emotion
 * Netlify deployment friendly
 * Nunito font included as npm module
+* Syntax highlighting with prismjs
 * Textmarkerstyle headings inspired by Basecamp
 * Site meta tags with React Helmet
 * Plugins for offline support
