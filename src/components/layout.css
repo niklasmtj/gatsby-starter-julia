@@ -389,7 +389,7 @@ pre {
   margin-right: 0;
   margin-top: 0;
   margin-bottom: 1.45rem;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   line-height: 1.42;
   background: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
@@ -528,15 +528,15 @@ li > p {
   margin-bottom: calc(1.45rem / 2);
 }
 code {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   line-height: 1.45rem;
 }
 kbd {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   line-height: 1.45rem;
 }
 samp {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   line-height: 1.45rem;
 }
 abbr {
@@ -602,6 +602,19 @@ pre code:after,
 pre tt:before,
 pre tt:after {
   content: "";
+}
+.gatsby-highlight {
+  background-color: #1d1f21;
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  padding: 1em;
+  overflow: auto;
+}
+
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  padding: 0;
+  padding-left: 2.8em;
+  overflow: initial;
 }
 @media only screen and (max-width: 480px) {
   html {
