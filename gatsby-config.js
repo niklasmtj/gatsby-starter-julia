@@ -66,10 +66,10 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-web-font-loader",
+      resolve: `gatsby-plugin-web-font-loader`,
       options: {
         google: {
-          families: ["Nunito:400,700"],
+          families: [`Nunito:400,700`],
         },
       },
     },
