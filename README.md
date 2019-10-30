@@ -11,23 +11,24 @@
 [GatsbyJS](https://www.gatsbyjs.org/) is a free and open source static website builder build on React. It's one implementation of the [JAMstack](https://jamstack.org/) idea which creates high speed webpages.
 
 ## 📚 Features:
-* Landingpage
-* Blog overview page
-* Markdown sourcing from /content folder
-* Estimated reading time for each post
-* Styled components with emotion
-* Netlify deployment friendly
-* Nunito font included as npm module
-* Syntax highlighting with prismjs
-* Textmarkerstyle headings inspired by Basecamp
-* Site meta tags with React Helmet
-* Plugins for offline support
 
+- Landingpage
+- Blog overview page
+- Markdown sourcing from /content folder
+- Estimated reading time for each post
+- Styled components with emotion
+- Netlify deployment friendly
+- Nunito font included as npm module
+- Syntax highlighting with prismjs
+- Textmarkerstyle headings inspired by Basecamp
+- Site meta tags with React Helmet
+- Plugins for offline support
+- Draft blog posts not published
 
 ## 👨🏻‍💻 Customization
 
 Create new pages like an About page in the `/pages` directory.
-The minimum code is: 
+The minimum code is:
 
 ```js
 import React from "react"
@@ -49,7 +50,7 @@ To change the name on the landing page please modify the `title` in `gatsby-conf
 
 The Nunito typeface is included as a npm module in `gatsby-browser.js` and in `/components/layout.css`
 
-___
+---
 
 This Gatsby starter is built on top of the official [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default). You can find a quick start guide in the following lines. There are the most important files explained.
 
