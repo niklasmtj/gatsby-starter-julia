@@ -4,7 +4,7 @@ code {
 
 body {
   margin: 0;
-  font-family: 'Nunito', 'Avenir', 'Helvetica', 'sans-serif';
+  font-family: "Nunito", "Avenir", "Helvetica", "sans-serif";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -583,8 +583,6 @@ code {
   font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
     "Liberation Mono", Menlo, Courier, monospace;
   padding: 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
 }
 pre code {
   background: none;
