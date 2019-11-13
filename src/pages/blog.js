@@ -15,13 +15,11 @@ const Content = styled.div`
 const ArticleDate = styled.h5`
   display: inline;
   color: #606060;
-  margin-bottom: 10px;
 `
 
 const MarkerHeader = styled.h3`
   display: inline;
   border-radius: 1em 0 1em 0;
-  margin-bottom: 10px;
   background-image: linear-gradient(
     -100deg,
     rgba(255, 250, 150, 0.15),
@@ -33,7 +31,6 @@ const MarkerHeader = styled.h3`
 const ReadingTime = styled.h5`
   display: inline;
   color: #606060;
-  margin-bottom: 10px;
 `
 
 const IndexPage = ({ data }) => {
