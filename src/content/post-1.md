@@ -24,7 +24,7 @@ Paragraph
 
 ---
 
-[Example.com very very very very very very very very very very very very very very very very long long long long link](example.com)
+[Example.com](example.com)
 
 ---
 
