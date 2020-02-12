@@ -601,6 +601,18 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+p::selection,
+a::selection {
+  background: #fffa96cc;
+}
+
 .gatsby-highlight {
   background-color: #1d1f21;
   border-radius: 0.3em;
