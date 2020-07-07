@@ -44,6 +44,10 @@ const MarkdownContent = styled.div`
       background-size: 100% 88%;
     }
   }
+
+  a > code:hover {
+    text-decoration: underline;
+  }
 `
 
 export default ({ data }) => {
