@@ -54,13 +54,13 @@ const IndexPage = ({ data }) => {
                   color: inherit;
                 `}
               >
-                <MarkerHeader>{node.frontmatter.title} </MarkerHeader>
-                <div>
-                  <ArticleDate>{node.frontmatter.date}</ArticleDate>
-                  <ReadingTime> - {node.fields.readingTime.text}</ReadingTime>
-                </div>
-                <p>{node.excerpt}</p>
+                <MarkerHeader>{node.frontmatter.title}</MarkerHeader>
               </Link>
+              <div>
+                <ArticleDate>{node.frontmatter.date}</ArticleDate>
+                <ReadingTime> - {node.fields.readingTime.text}</ReadingTime>
+              </div>
+              <p>{node.excerpt}</p>
             </div>
           ))}
       </Content>
