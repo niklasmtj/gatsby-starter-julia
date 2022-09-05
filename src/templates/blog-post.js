@@ -61,7 +61,7 @@ const Data = ({ data }) => {
       <Content>
         <MarkedHeader>{post.frontmatter.title}</MarkedHeader>
         <HeaderDate>
-          {post.frontmatter.date} - {post.fields.readingTime.text}
+          {post.frontmatter.date} - {post.timeToRead} min
         </HeaderDate>
         <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
       </Content>
@@ -72,7 +72,7 @@ const Data = ({ data }) => {
 export default Data
 
 export const pageQuery = graphql`
-  query($path: String!) {
+  query ($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       excerpt(pruneLength: 160)
@@ -81,11 +81,7 @@ export const pageQuery = graphql`
         path
         title
       }
-      fields {
-        readingTime {
-          text
-        }
-      }
+      timeToRead
     }
   }
 `
