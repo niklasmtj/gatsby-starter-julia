@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import styled from "@emotion/styled"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const Content = styled.div`
   margin: 0 auto;
@@ -50,18 +50,18 @@ const MarkdownContent = styled.div`
   }
 `
 
-export default ({ data }) => {
+const Data = ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout>
-      <SEO
+      <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
       <Content>
         <MarkedHeader>{post.frontmatter.title}</MarkedHeader>
         <HeaderDate>
-          {post.frontmatter.date} - {post.fields.readingTime.text}
+          {post.frontmatter.date} - {post.timeToRead} min
         </HeaderDate>
         <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
       </Content>
@@ -69,8 +69,10 @@ export default ({ data }) => {
   )
 }
 
+export default Data
+
 export const pageQuery = graphql`
-  query($path: String!) {
+  query ($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       excerpt(pruneLength: 160)
@@ -79,11 +81,7 @@ export const pageQuery = graphql`
         path
         title
       }
-      fields {
-        readingTime {
-          text
-        }
-      }
+      timeToRead
     }
   }
 `

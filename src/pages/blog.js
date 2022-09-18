@@ -1,10 +1,10 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import styled from "@emotion/styled"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const Content = styled.div`
   margin: 0 auto;
@@ -36,7 +36,7 @@ const ReadingTime = styled.h5`
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Blog" />
+      <Seo title="Blog" />
       <Content>
         <h1>Blog</h1>
         {data.allMarkdownRemark.edges
@@ -58,7 +58,7 @@ const IndexPage = ({ data }) => {
               </Link>
               <div>
                 <ArticleDate>{node.frontmatter.date}</ArticleDate>
-                <ReadingTime> - {node.fields.readingTime.text}</ReadingTime>
+                <ReadingTime> - {node.timeToRead} min</ReadingTime>
               </div>
               <p>{node.excerpt}</p>
             </div>
@@ -93,10 +93,8 @@ export const query = graphql`
           }
           fields {
             slug
-            readingTime {
-              text
-            }
           }
+          timeToRead
           excerpt
         }
       }
